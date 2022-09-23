@@ -20,32 +20,22 @@
       ##
       # MODULES
       ##
+      # User config
+      ./modules/system/user.nix
       # Display config
       ./modules/display/manager.nix
       ./modules/display/pantheon/default.nix
 
+      # Shell config
+      ./modules/shell/locale.nix
+      ./modules/shell/zsh.nix
+      ./modules/shell/packages.nix
+
     ];
-
-
 
   # Enable networking
   networking.networkmanager.enable = true;
 
-  # Set your time zone.
-  time.timeZone = "Europe/Paris";
-
-
-
-  
-
-  # Configure keymap in X11
-  services.xserver = {
-    layout = "fr";
-    xkbVariant = "azerty";
-  };
-
-  # Configure console keymap
-  console.keyMap = "fr";
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
@@ -69,17 +59,6 @@
 
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
-
-  # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.brice_michalski = {
-    isNormalUser = true;
-    description = "brice";
-    extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [
-      firefox
-    #  thunderbird
-    ];
-  };
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget

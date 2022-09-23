@@ -48,8 +48,6 @@
       "org/gnome/desktop/background" = {
         picture-uri = "file:///home/brice_michalski/.local/share/backgrounds/wallpaper.jpg";
       };
-
-  };
-
+    };
   };
 }
