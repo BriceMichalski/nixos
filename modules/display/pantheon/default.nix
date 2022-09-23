@@ -16,10 +16,10 @@
 
     ];
 
-    # dconf.settings = {
-    #   "net/launchpad/plank" = {
-
-    #   }
-    # };
+    dconf.settings = {
+      "org/gnome/desktop/background" = {
+        picture-uri = "file:///home/brice_michalski/.local/share/backgrounds/wallpaper.jpg";
+      };
+    };
   };
 }
