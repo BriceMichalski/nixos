@@ -25,11 +25,16 @@
       # Display config
       ./modules/display/manager.nix
       ./modules/display/pantheon/default.nix
-
+      ./modules/display/pantheon/plank.nix
       # Shell config
       ./modules/shell/locale.nix
       ./modules/shell/zsh.nix
+      ./modules/shell/vim.nix  
       ./modules/shell/packages.nix
+      # App config
+      ./modules/app/vscode.nix
+      ./modules/app/browser.nix
+      ./modules/app/terminator.nix
 
     ];
 
@@ -66,37 +71,4 @@
   #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
   #  wget
   ];
-
-  # Some programs need SUID wrappers, can be configured further or are
-  # started in user sessions.
-  # programs.mtr.enable = true;
-  # programs.gnupg.agent = {
-  #   enable = true;
-  #   enableSSHSupport = true;
-  # };
-
-  # List services that you want to enable:
-
-  # Enable the OpenSSH daemon.
-  # services.openssh.enable = true;
-
-  # Open ports in the firewall.
-  # networking.firewall.allowedTCPPorts = [ ... ];
-  # networking.firewall.allowedUDPPorts = [ ... ];
-  # Or disable the firewall altogether.
-  # networking.firewall.enable = false;
-
-  # This value determines the NixOS release from which the default
-  # settings for stateful data, like file locations and database versions
-  # on your system were taken. It‘s perfectly fine and recommended to leave
-  # this value at the release version of the first install of this system.
-  # Before changing this value read the documentation for this option
-  # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
-  # Did you read the comment?
-
-  home-manager.users.brice_michalski = {
-    programs.vscode = {
-      enable = true;
-    };
-  };
 }
