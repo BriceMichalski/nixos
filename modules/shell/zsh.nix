@@ -18,7 +18,8 @@
         enableSyntaxHighlighting = true;
         enableCompletion = true;
         shellAliases = {
-          ll = "ls -l";
+          ll = "exa -l";
+          tree = "exa -l -T";
           cat = "bat --paging=never";
           update = "sudo NIXPKGS_ALLOW_UNFREE=1 nixos-rebuild switch";
         };
