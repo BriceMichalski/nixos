@@ -3,7 +3,7 @@
   users.users.brice_michalski = {
     isNormalUser = true;
     home = "/home/brice_michalski";
-    description = "brice_michalski";
+    description = "Brice";
     uid = 1000;
     extraGroups = [ "wheel" ];
     shell = pkgs.zsh;
