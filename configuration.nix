@@ -22,7 +22,7 @@
       ##
       # User config
       ./modules/system/user.nix
-      ./modules/system/pwupd.nix
+      ./modules/system/fwupd.nix
       # Display config
       ./modules/display/manager.nix
       ./modules/display/pantheon/default.nix
