@@ -20,6 +20,7 @@
       unzip
       p7zip
       # mess
+      htop
       neofetch
       thefuck
       tree
