@@ -32,6 +32,8 @@
       ./modules/shell/zsh.nix
       ./modules/shell/vim.nix  
       ./modules/shell/packages.nix
+      # Ops soft
+      ./modules/ops/docker.nix
       # App config
       ./modules/app/vscode.nix
       ./modules/app/browser.nix
