@@ -31,6 +31,7 @@
       ./modules/shell/locale.nix
       ./modules/shell/zsh.nix
       ./modules/shell/vim.nix  
+      ./modules/shell/git.nix
       ./modules/shell/packages.nix
       # Ops soft
       ./modules/ops/docker.nix
@@ -38,6 +39,9 @@
       ./modules/app/vscode.nix
       ./modules/app/browser.nix
       ./modules/app/terminator.nix
+
+      # Mess 
+      ./modules/mess.nix
 
     ];
 

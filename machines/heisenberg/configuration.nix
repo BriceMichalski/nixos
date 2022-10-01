@@ -12,8 +12,7 @@
 
   # Cooling Management
   services.thermald.enable = true;
-  services.throttled.enable = true;
-  
+
   boot.initrd.secrets = {
     "/crypto_keyfile.bin" = null;
   };

@@ -21,7 +21,9 @@
           ll = "exa -l";
           tree = "exa -l -T";
           cat = "bat --paging=never";
-          update = "sudo NIXPKGS_ALLOW_UNFREE=1 nixos-rebuild switch";
+          nix-up = "sudo NIXPKGS_ALLOW_UNFREE=1 nixos-rebuild switch --upgrade";
+          nix-ls =  "sudo nix-env -p /nix/var/nix/profiles/system --list-generations";
+          nix-gc = "sudo nix-collect-garbage -d --delete-older-than 10d";
         };
         initExtra = "
           eval $(thefuck --alias)
