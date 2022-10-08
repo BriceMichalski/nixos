@@ -9,7 +9,7 @@
   boot.loader.grub.useOSProber = true;
 
   boot.loader.efi.canTouchEfiVariables = true;
-  boot.loader.efi.efiSysMountPoint = "/boot/efi";
+  boot.loader.efi.efiSysMountPoint = "/boot";
 
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
