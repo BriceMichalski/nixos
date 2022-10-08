@@ -2,14 +2,14 @@
 
 {
   networking.hostName = "heisenberg";
-  
+
   boot.loader.grub.enable = true;
   boot.loader.grub.version = 2;
   boot.loader.grub.device = "nodev";
   boot.loader.grub.useOSProber = true;
   boot.loader.systemd-boot.enable = false;
-  boot.loader.efi.canTouchEfiVariables = true;   
-  boot.loader.efi.efiSysMountPoint = "/boot";
+  boot.loader.efi.canTouchEfiVariables = true;
+  boot.loader.efi.efiSysMountPoint = "/boot/efi";
 
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
@@ -19,7 +19,7 @@
   boot.initrd.secrets = {
     "/crypto_keyfile.bin" = null;
   };
-  
+
   imports = [
     <nixos-hardware/common/pc/ssd>
     <nixos-hardware/common/pc/laptop>
