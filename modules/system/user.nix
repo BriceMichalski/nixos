@@ -7,6 +7,9 @@
     uid = 1000;
     extraGroups = [ "wheel" ];
     shell = pkgs.zsh;
+    
+    # mkpasswd -m sha-512
+    hashedPassword = "$6$2sZttFuWn32qHeK3$gTC3aPaabHegThX1p9XH0CQip14U4lIN4u1pDkzZB37AmgSGdNWI6FtHBzizLyaFbZ22Sen3mVGKt4ZvBOPBB/"
   };
 
   home-manager.users.brice_michalski = { pkgs, ... }: {

@@ -20,5 +20,11 @@
     "/crypto_keyfile.bin" = null;
   };
   
+  imports = [
+    <nixos-hardware/common/pc/ssd>
+    <nixos-hardware/common/pc/laptop>
+    <nixos-hardware/common/cpu/intel>
+    <nixos-hardware/common/gpu/nvidia.nix>
+  ];
 
 }
