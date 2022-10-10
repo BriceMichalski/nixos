@@ -8,7 +8,7 @@
     uid = 1000;
     extraGroups = [ "wheel" ];
     shell = pkgs.zsh;
-    initialPassword = "changeme"
+    initialPassword = "changeme";
   };
 
   home-manager.users.brice_michalski = { pkgs, ... }: {
