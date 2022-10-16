@@ -21,6 +21,7 @@
       # MODULES
       ##
       # System config
+      ./modules/system/locale.nix
       ./modules/system/user.nix
       ./modules/system/fwupd.nix
       ./modules/system/network.nix
@@ -33,7 +34,6 @@
       ./modules/display/pantheon/plank.nix
 
       # Shell config
-      ./modules/shell/locale.nix
       ./modules/shell/zsh.nix
       ./modules/shell/vim.nix  
       ./modules/shell/git.nix

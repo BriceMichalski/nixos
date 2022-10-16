@@ -1,12 +1,5 @@
 { pkgs, lib, ... }:
 {
-
-  virtualisation.docker.enable = true;
-
-  users.users.brice_michalski = {
-    extraGroups = [ "docker" ];
-  };
-
   home-manager.users.brice_michalski = { pkgs, ... }: {
     home.packages = with pkgs; [
       # json/yaml

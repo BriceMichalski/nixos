@@ -24,7 +24,7 @@ Following the [documentation](https://nixos.org/manual/nixos/stable/index.html#s
 
 - Step 2: Disk encryption
   ```bash
-  # Encrypt and open partition
+  # Encrypt and open root partition
   cryptsetup luksFormat /dev/nvme0n1p2
   cryptsetup luksOpen /dev/nvme0n1p2 cryptroot
   ```
@@ -41,9 +41,9 @@ Following the [documentation](https://nixos.org/manual/nixos/stable/index.html#s
   # Mount root partition to /mnt
   mount /dev/disk/by-label/nixos /mnt
 
-  # Mount boot fs on /mnt/boot
+  # Mount boot fs on /mnt/boot/efi
   mkdir -p /mnt/boot
-  mount /dev/disk/by-label/boot /mnt/boot
+  mount /dev/disk/by-label/boot /mnt/boot/efi
 
   #Enable swap
   swapon /dev/nvme0n1p3

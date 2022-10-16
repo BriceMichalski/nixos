@@ -1,12 +1,9 @@
 { pkgs, ... }:
 {
-  users.mutableUsers = true;
   users.users.brice_michalski = {
     isNormalUser = true;
-    home = "/home/brice_michalski";
     description = "Brice";
-    uid = 1000;
-    extraGroups = [ "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" ];
     shell = pkgs.zsh;
     initialPassword = "changeme";
   };
@@ -16,8 +13,6 @@
     home.homeDirectory = "/home/brice_michalski";
 
     programs.home-manager.enable = true;
-    nixpkgs.config.allowUnfree = true;
-
     home.stateVersion = "22.05";
   };
 }
