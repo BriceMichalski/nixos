@@ -43,7 +43,7 @@ Following the [documentation](https://nixos.org/manual/nixos/stable/index.html#s
 
   # Mount boot fs on /mnt/boot/efi
   mkdir -p /mnt/boot
-  mount /dev/disk/by-label/boot /mnt/boot/efi
+  mount /dev/disk/by-label/boot /mnt/boot
 
   #Enable swap
   swapon /dev/nvme0n1p3
