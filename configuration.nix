@@ -30,8 +30,6 @@
 
       # Display config
       ./modules/display/manager.nix
-      ./modules/display/pantheon/default.nix
-      ./modules/display/pantheon/plank.nix
 
       # Shell config
       ./modules/shell/zsh.nix
