@@ -30,7 +30,8 @@
 
       # Display config
       ./modules/display/manager.nix
-
+      ./modules/display/gnome.nix
+      
       # Shell config
       ./modules/shell/zsh.nix
       ./modules/shell/vim.nix  
