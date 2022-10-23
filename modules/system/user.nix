@@ -9,7 +9,7 @@
     extraGroups = [ "networkmanager" "wheel" ];
     shell = pkgs.zsh;
     useDefaultShell = false;
-    initialPassword = "changeme";
+    hashedPassword = "$6$AvwI84wQZEukuI1Q$SvmqIxPn2.D2zZjYVPavcweRLEmB4.GwLVj3OsE9rb0D5vneH2DYjGEak2OMTUSUuRv2PXgST3QTBmGnpjM1S0";
   };
 
   home-manager.users.brice_michalski = { pkgs, ... }: {
