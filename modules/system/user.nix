@@ -1,10 +1,14 @@
 { pkgs, ... }:
 {
+
+  environment.shells = [ pkgs.zsh pkgs.bashInteractive ];
+
   users.users.brice_michalski = {
     isNormalUser = true;
     description = "Brice";
     extraGroups = [ "networkmanager" "wheel" ];
     shell = pkgs.zsh;
+    useDefaultShell = false;
     initialPassword = "changeme";
   };
 
@@ -15,4 +19,6 @@
     programs.home-manager.enable = true;
     home.stateVersion = "22.05";
   };
+
+  security.sudo.wheelNeedsPassword = false;
 }
