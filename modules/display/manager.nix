@@ -3,7 +3,14 @@
   # Enable the X11 windowing system.
   services.xserver.enable = true;
 
-  # Enable the LightDM display manager.
-  services.xserver.displayManager.lightdm.enable = true;
-  
+  systemd.services."getty@tty1".enable = false;
+  systemd.services."autovt@tty1".enable = false;
+  services.xserver.displayManager = {
+    autoLogin = {
+      enable = true;
+      user = "brice_michalski";
+    };
+    gdm.enable = true;
+  };
+
 }

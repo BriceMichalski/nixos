@@ -20,6 +20,7 @@
       unzip
       p7zip
       # mess
+      htop
       neofetch
       thefuck
       tree
@@ -31,6 +32,7 @@
       exa
       glances
       psmisc
+      lm_sensors
     ];
   };
 }

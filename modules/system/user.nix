@@ -1,22 +1,24 @@
 { pkgs, ... }:
 {
+
+  environment.shells = [ pkgs.zsh pkgs.bashInteractive ];
+
   users.users.brice_michalski = {
     isNormalUser = true;
-    home = "/home/brice_michalski";
     description = "Brice";
-    uid = 1000;
-    extraGroups = [ "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" ];
     shell = pkgs.zsh;
+    useDefaultShell = false;
+    hashedPassword = "$6$AvwI84wQZEukuI1Q$SvmqIxPn2.D2zZjYVPavcweRLEmB4.GwLVj3OsE9rb0D5vneH2DYjGEak2OMTUSUuRv2PXgST3QTBmGnpjM1S0";
   };
 
   home-manager.users.brice_michalski = { pkgs, ... }: {
     home.username = "brice_michalski";
     home.homeDirectory = "/home/brice_michalski";
 
-
     programs.home-manager.enable = true;
-    nixpkgs.config.allowUnfree = true;
-
     home.stateVersion = "22.05";
   };
+
+  security.sudo.wheelNeedsPassword = false;
 }
