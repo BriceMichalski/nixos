@@ -21,7 +21,8 @@ if [ "$confirm" != "Y" ]; then
     echo -e "${RED}ABORT${NC}"
     exit 1
 else
-    continue
+    clear
+    echo -e "${GREEN}== INSTALL =="
 fi
 
 # Disk partitionnement
