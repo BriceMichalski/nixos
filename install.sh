@@ -28,7 +28,7 @@ fi
 # Disk partitionnement
 echo -e "${GREEN}Create partition on disk${NC}"
 sleep 5
-parted /dev/nvme0n1 -- mklabel gpt
+parted -s /dev/nvme0n1 -- mklabel gpt
 parted /dev/nvme0n1 -- mkpart ESP fat32 1MB 512MB
 parted /dev/nvme0n1 -- set 1 esp on
 parted /dev/nvme0n1 -- mkpart primary 512MB -${ram_size}GB
@@ -54,6 +54,7 @@ mount /dev/disk/by-label/nixos /mnt
 mkdir -p /mnt/boot
 mount /dev/disk/by-label/boot /mnt/boot
 swapon /dev/nvme0n1p3
+lsblk
 
 # Config
 echo -e "${GREEN}Download nixos configuration${NC}"
