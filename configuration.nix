@@ -5,7 +5,7 @@
   nixpkgs.config.allowUnfree = true;
 
   imports =
-    [ 
+    [
       ##
       # NIXOS
       ##
@@ -31,26 +31,27 @@
       # Display config
       ./modules/display/manager.nix
       ./modules/display/gnome.nix
-      
+
       # Shell config
       ./modules/shell/zsh.nix
-      ./modules/shell/vim.nix  
+      ./modules/shell/vim.nix
       ./modules/shell/git.nix
       ./modules/shell/packages.nix
 
       # Ops soft
       ./modules/ops/docker.nix
+      ./modules/ops/sops.nix
 
       # App config
       ./modules/app/vscode.nix
       ./modules/app/browser.nix
       ./modules/app/terminator.nix
 
-      # Mess 
+      # Mess
       ./modules/mess.nix
 
     ];
   # Enable CUPS to print documents.
- 
+
 
 }

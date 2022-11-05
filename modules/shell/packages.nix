@@ -2,6 +2,8 @@
 {
   home-manager.users.brice_michalski = { pkgs, ... }: {
     home.packages = with pkgs; [
+      # env var
+      direnv
       # json/yaml
       dyff
       yq
