@@ -2,3 +2,8 @@
 machines/local
 secrets.json
 age.txt
+
+# Sops
+**/.decrypted*
+**/secrets.json
+yaml
