@@ -46,6 +46,8 @@
         favorite-apps = [
           # Fichier
           "org.gnome.Nautilus.desktop"
+          # music
+          "spotify.desktop"
           # vscode
           "code.desktop"
           # chrome
