@@ -6,21 +6,16 @@
 
   imports =
     [
-      ##
       # NIXOS
-      ##
       ./machines/local/hardware-configuration.nix
       ./machines/local/configuration.nix
 
-      ##
       # EXTENSION
-      ##
       <home-manager/nixos>
 
-      ##
       # MODULES
-      ##
       ./modules/app
+      ./modules/dev
       ./modules/display
       ./modules/ops
       ./modules/shell
@@ -28,5 +23,8 @@
 
       # Mess
       ./modules/mess.nix
+
+      # Secrets
+      ./secrets
     ];
 }

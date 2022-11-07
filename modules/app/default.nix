@@ -6,5 +6,6 @@
       ./vscode.nix
       ./browser.nix
       ./terminator.nix
+      ./spotify.nix
     ];
 }

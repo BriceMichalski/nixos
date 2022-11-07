@@ -6,7 +6,7 @@
       ./locale.nix
       ./user.nix
       ./fwupd.nix
-      ./network.nix
+      ./network
       ./sound.nix
       ./printing.nix
     ];
