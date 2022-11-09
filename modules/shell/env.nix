@@ -23,6 +23,8 @@ in
         export WORK_DOCKER_REGISTRY="${sysconfig.secrets.WORK_DOCKER_REGISTRY}"
         export WORK_VPN_GW="${sysconfig.secrets.WORK_VPN_GW}"
         export WORK_EMAIL="${sysconfig.secrets.WORK_EMAIL}"
+        export WORK_NO_PROXY="localhost,127.0.0.1"
+        export KUBECONFIG=/home/brice_michalski/.kube/kubeconfig
         '';
       };
     };

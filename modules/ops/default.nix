@@ -7,5 +7,6 @@
       ./docker.nix
       ./kube.nix
       ./sops.nix
+      ./terraform.nix
     ];
 }
