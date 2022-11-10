@@ -59,13 +59,18 @@ lsblk
 # Config
 echo -e "${GREEN}Download nixos configuration${NC}"
 sleep 5
-nix-env -iA nixos.git
+nix-env -iA nixos.git nixos.sops nixos.age
 mkdir -p /mnt/etc/nixos
 cd /mnt/etc/nixos
 git clone https://github.com/BriceMichalski/nixos .
 
 ./setup.sh $name
 nixos-generate-config --root /mnt --dir machines/local
+
+# Unencrypt secrets
+export SOPS_AGE_KEY_FILE=~/.age/keys.txt
+sops --decrypt secrets/secrets.json.enc > secrets/secrets.json
+
 
 # Install
 echo -e "${GREEN}Install nix channel${NC}"

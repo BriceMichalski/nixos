@@ -1,4 +1,8 @@
 { pkgs, ... }:
+let
+  sysconfig = (import <nixpkgs/nixos> { }).config;
+in
+
 {
   home-manager.users.brice_michalski = { pkgs, ... }: {
 
@@ -30,6 +34,16 @@
           };
         };
 
+        includes = [
+          {
+            condition = "gitdir:**/*" + sysconfig.secrets.WORK_GIT_REGISTRY + "/**";
+            contents = {
+              user = {
+                email = sysconfig.secrets.WORK_EMAIL;
+              };
+            };
+          }
+        ];
         # # Better looking diff
         # delta = {
         #   enable = true;

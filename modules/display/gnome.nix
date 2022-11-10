@@ -11,7 +11,6 @@
     gnome-terminal
     gedit # text editor
     epiphany # web browser
-    geary # email reader
     evince # document viewer
     gnome-characters
     totem # video player
@@ -46,6 +45,10 @@
         favorite-apps = [
           # Fichier
           "org.gnome.Nautilus.desktop"
+          # Mail
+          "org.gnome.Geary.desktop"
+          # music
+          "spotify.desktop"
           # vscode
           "code.desktop"
           # chrome

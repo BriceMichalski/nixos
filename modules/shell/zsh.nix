@@ -24,6 +24,7 @@
           nix-up = "sudo NIXPKGS_ALLOW_UNFREE=1 nixos-rebuild switch --upgrade";
           nix-ls =  "sudo nix-env -p /nix/var/nix/profiles/system --list-generations";
           nix-gc = "sudo nix-collect-garbage -d --delete-older-than 10d";
+          t = "todo.sh";
         };
         initExtra = "
           eval $(thefuck --alias)
