@@ -3,6 +3,7 @@
 {
   imports =
     [
+      ./java.nix
       ./nodejs.nix
     ];
 }
