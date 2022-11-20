@@ -8,6 +8,7 @@ let
       [
         # allow helmfile diff
         helm-diff
+        helm-secrets
       ];
   };
 in

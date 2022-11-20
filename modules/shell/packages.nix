@@ -36,6 +36,7 @@
       psmisc
       lm_sensors
       todo-txt-cli
+      parted
     ];
   };
 }

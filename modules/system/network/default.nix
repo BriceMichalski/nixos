@@ -26,6 +26,8 @@
     Defaults env_keep += CURL_NIX_FLAGS
   ";
 
+  systemd.services.NetworkManager-wait-online.enable = false;
+
   imports =
     [
       ./c4vpn.nix
