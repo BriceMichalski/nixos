@@ -6,4 +6,9 @@
     extraGroups = [ "docker" ];
   };
 
+  environment.systemPackages = [
+    pkgs.docker-compose
+    pkgs.kind
+  ];
+
 }

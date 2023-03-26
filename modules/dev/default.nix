@@ -5,5 +5,6 @@
     [
       ./java.nix
       ./nodejs.nix
+      ./python.nix
     ];
 }
